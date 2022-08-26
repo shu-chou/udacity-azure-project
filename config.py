@@ -41,4 +41,8 @@ class Config(object):
     # Used to form an absolute URL; must match to app's redirect_uri set in AAD
     REDIRECT_PATH = "/auth-token"
 
+    # You can find the proper permission names from this document
+    # https://docs.microsoft.com/en-us/graph/permissions-reference
+    SCOPE = ["User.Read"]  # Only need to read user profile for this app
+
     SESSION_TYPE = "filesystem"  # Token cache will be stored in server-side session
